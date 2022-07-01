@@ -1,0 +1,777 @@
+<!-- The MIT License (MIT)
+Copyright (c) 2013-2022 Start Bootstrap LLC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>L P</title>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Script to send email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('DdkhgOquHEPGD_e83');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('service_8zy35n2', 'template_8164zfh', this)
+                    .then(function () {
+                        alert("Message sent!");
+                        const form = document.getElementById('contact-form');
+                        form.reset();
+                    }, function (error) {
+                        alert("An error occured!");
+                    });
+            });
+        }
+    </script>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Loukas Papalazarou</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#experience"><i class='fas fa-briefcase'></i> Experience</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#education"><i
+                                class='fas fa-graduation-cap'></i> Education</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#projects"><i
+                                class='fas fa-code'></i> Projects</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about"><i
+                                class='fas fa-user-alt'></i> About
+                        </a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact"><i
+                                class='fas fa-edit'></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="assets/img/favicon.png" alt="..." />
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">Loukas Papalazarou</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">Computer Science student - Problem solver</p>
+            <br><a class="btn btn-xl btn-outline-light" href="assets/docs/resume.pdf" download>
+                <i class="fas fa-download me-2"></i>
+                Download Resume
+            </a>
+        </div>
+    </header>
+
+    <!-- Experience Section -->
+    <section class="page-section portfolio" id="experience">
+        <div class="container">
+            <!-- Experience Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Work experience</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class='fas fa-briefcase'></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Experience Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#experienceModal1">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/experience/pwc_logo.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Experience Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#experienceModal2">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/experience/electroline_logo.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Experience Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#experienceModal3">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/experience/koios_logo.png" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section-->
+    <section class="page-section bg-primary text-white mb-0" id="education">
+        <div class="container">
+            <!-- Education Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">Education</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class='fas fa-graduation-cap'></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Education Section Content-->
+            <div class="row">
+                <div class="col-lg-4 ms-auto">
+                    <img src="assets/img/education/UCY_logo.jpg"
+                        style='height: 100%; width: 100%; object-fit: contain;'><br><br>
+                </div>
+                <div class="col-lg-4 me-auto">
+                    <h5>University of Cyprus</h5>
+                    <h6>September 2019 - Today</h6>
+                    <p class="lead">
+                        I am currently a 4th year Computer Science student at the University of Cyprus. I have
+                        completed
+                        courses such as OOP
+                        (Java), Databases, Algorithms, Operating Systems, Data Structures, Software Engineering and
+                        my
+                        average grade is
+                        currently 8.09/10.</p>
+                    <a class="btn btn btn-outline-light" href="assets/docs/UCY Academic Transcript.pdf" target="_blank">
+                        Academic Transcript
+                    </a>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-lg-4 ms-auto">
+                    <img src="assets/img/education/UHK_logo.jpg"
+                        style='height: 100%; width: 100%; object-fit: contain'><br><br>
+                </div>
+                <div class="col-lg-4 me-auto">
+                    <h5>University of Hradec Králové</h5>
+                    <h6>February 2022 - June 2022</h6>
+                    <p class="lead">
+                        During the 2021-2022 Summer Semester, I attended classes at the Univesity of Hradec Kralove as
+                        part of the Erasmus
+                        program. I completed courses related to Python, Web development, Artificial Intelligence and
+                        Ontology modelling</p>
+                    <a class="btn btn btn-outline-light" href="assets/docs/UHK Academic Transcript.pdf" target="_blank">
+                        Academic Transcript
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section-->
+    <section class="page-section portfolio" id="projects">
+        <div class="container">
+            <!-- Projects Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Some of my projects</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class='fas fa-code'></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Projects Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Project Item 1 -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/projects/reliefant_portal.png" alt="..." />
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/projects/reliefant_app.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Project Item 2 -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/projects/python_racing_game.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Project Item 3 -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#projectModal4">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/projects/observers.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Project Item 4 -->
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#projectModal5">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/projects/parkpick.png" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">About me</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class='fas fa-user-alt'></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <p class="text-center lead">
+                Hello. My name is Loukas Papalazarou and I am currently studying Computer Science at the University of
+                Cyprus. Although I am studying CS, I would say my most valuable skill is being able to learn new skills
+                whenever is needed and adapting to each and every situation. I love solving problems and taking on
+                challenging projects!
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class='fas fa-edit'></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Form-->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <form id="contact-form">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." required
+                                name="user_name" />
+                            <label for="name">Full name*</label>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com"
+                                required name="user_email" />
+                            <label for="email">Email address*</label>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
+                                name="user_phone" />
+                            <label for="phone">Phone number (optional)</label>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text"
+                                placeholder="Enter your message here..." style="height: 10rem"
+                                data-sb-validations="required" name="message"></textarea>
+                            <label for="message">Message*</label>
+                        </div>
+                        <!-- Submit Button-->
+                        <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4"><i class='fas fa-map-marker-alt'></i> Location</h4>
+                    <p class="lead mb-0">
+                        Nicosia,
+                        <br />
+                        Cyprus
+                    </p>
+                </div>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4"><i class='fas fa-globe'></i> Around the Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/loukisCY"
+                        target="_blank"><i class="fab fa-fw fa-github"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1"
+                        href="https://www.linkedin.com/in/loukas-papalazarou-868b1a20a/" target="_blank"><i
+                            class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/loukaspapalazarou/"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <!-- Footer About Text-->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4"> <i class='fas fa-edit'></i> Contact Details</h4>
+                    <p class="lead mb-0">
+                        +357 96888185<br>
+                        loukas.papalazarou.cy@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Section-->
+    <!-- <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright &copy; Your Website 2022</small></div>
+    </div> -->
+
+    <!-- Experience modal 1 -->
+    <div class="portfolio-modal modal fade" id="experienceModal1" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">PWC Cyprus
+                                </h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <p style="font-weight:bolder; font-size:x-large;">Intern | July 2022</p>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/experience/pwc_logo.png" alt="..."
+                                    width="30%" height="30%" />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="font-size:larger;">N/A
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Experience modal 2 -->
+    <div class="portfolio-modal modal fade" id="experienceModal2" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">ALPAN ELECTROLINE
+                                    LTD
+                                </h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <p style="font-weight:bolder; font-size:x-large;">Freelance Software Developer | Feb
+                                    2021 - Apr 2021</p>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/experience/electroline_logo.png"
+                                    alt="..." width="30%" height="30%" />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="font-size:larger;">Co-Designed and Developed web scraping and
+                                    data importing software.
+                                    Pitched and sold to Alpan Electroline Ltd as part
+                                    of their efforts for automation.
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Experience modal 3 -->
+    <div class="portfolio-modal modal fade" id="experienceModal3" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">KOIOS COE
+                                </h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <p style="font-weight:bolder; font-size:x-large;">Software Engineering Intern - Special
+                                    Scientist | Dec 2020 - Oct 2021</p>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/experience/koios_logo.png" alt="..."
+                                    width="30%" height="30%" />
+                                <!-- Portfolio Modal - Text-->
+                                <ul>
+                                    <li>
+                                        <p class="mb-4" style="font-size:larger;">Wrote a Python web scraping script
+                                            using BS4 that could automatically extract data from published articles and
+                                            export
+                                            that to a .csv file
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="mb-4" style="font-size:larger;">Worked on QGIS (Geographical
+                                            Information System software). Wrote plugins for said software using Python.
+                                        </p>
+                                    </li>
+                                </ul>
+
+                                <a href="assets/docs/KOIOS Reference Letter.pdf" target="_blank"
+                                    style="font-size: larger;">Reference Letter</a><br><br>
+
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project Modal 1-->
+    <div class="portfolio-modal modal fade" id="projectModal1" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Reliefant Doctor's
+                                    Portal</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/projects/reliefant_portal.png"
+                                    alt="..." width="70%" height="70%" />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    This is the web portal that Doctor's will use to check up on their patients remotely
+                                    and amdinister medication.
+                                    This is a part of the Reliefant project.
+                                    Reliefant is a project me along with 5 other students are working on under our
+                                    startup "Half Past Five"
+                                    HPF for short is a tech-medical startup and we are currently
+                                    working on a product (Reliefant) to aid the care
+                                    of cancer patients and their experience.
+                                    This project cosists of 2 parts, the doctor's web portal the the patient's mobile
+                                    application. This is a part of JA's
+                                    Beyond Pre-Accelerator program.<br>
+                                    <a class="btn-sm btn-primary" href="https://github.com/loukisCY/reliefant"
+                                        target="_blank">
+                                        <i class="fab fa-fw fa-github"></i>
+                                        Check out on GitHub
+                                    </a>
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project Modal 2-->
+    <div class="portfolio-modal modal fade" id="projectModal2" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Reliefant Mobile
+                                    App</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/projects/reliefant_app.png"
+                                    alt="..." width="70%" height="70%" />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    This is the mobile application that patients will use to log their pain and
+                                    medication intake.
+                                    This is a part of the Reliefant project.
+                                    Reliefant is a project me along with 5 other students are working on under our
+                                    startup "Half Past Five"
+                                    HPF for short is a tech-medical startup and we are currently
+                                    working on a product (Reliefant) to aid the care
+                                    of cancer patients and their experience.
+                                    This project cosists of 2 parts, the doctor's web portal the the patient's mobile
+                                    application. This is a part of JA's
+                                    Beyond Pre-Accelerator program.<br>
+                                    <a class="btn-sm btn-primary" href="assets/vids/Reliefant by HPF.mp4"
+                                        target="_blank">
+                                        <i class="f	fas fa-film"></i>
+                                        Check out out promotional video
+                                    </a>
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project Modal 3-->
+    <div class="portfolio-modal modal fade" id="projectModal3" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Python Racing Game
+                                </h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/projects/python_racing_game.png"
+                                    alt="..." width="80%" height="80%" />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    This is just a simple racing game made in pygame. It consists of 2 laps around a
+                                    track, stopwatch and scoreboard. It is
+                                    made as part of the course 'Python Programming Language' at the University of Hradec
+                                    Kralove.<br>
+                                    <a class="btn-sm btn-primary" href="https://github.com/loukisCY/Python-racing-game"
+                                        target="_blank">
+                                        <i class="fab fa-fw fa-github"></i>
+                                        Check out on GitHub
+                                    </a>
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project Modal 4-->
+    <div class="portfolio-modal modal fade" id="projectModal4" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Observers System
+                                </h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/projects/observers.png" alt="..."
+                                    width="80%" height="80%" />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    This is a web portal that fetches data from an SQL Server database. In this
+                                    fictional scenario, me and my team manage the Observers System. It is a large
+                                    database platform for companies and users to create, edit, search and publish
+                                    questionnaires. This project was a group assignment
+                                    of the course Databases (EPL342) at UCY.<br>
+                                    <a class="btn-sm btn-primary" href="https://github.com/Larkoss/public_html"
+                                        target="_blank">
+                                        <i class="fab fa-fw fa-github"></i>
+                                        Check out on GitHub
+                                    </a>
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project Modal 5-->
+    <div class="portfolio-modal modal fade" id="projectModal5" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Parkpick
+                                </h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/projects/parkpick.png" alt="..."
+                                    width="80%" height="80%" />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    Parkpick is an online web application that allows users to find, reserve and pay
+                                    for parking spots online and ahead of
+                                    time at specific parking spaces owned by clients partnered with our app. This
+                                    document outlines its User Interface, its
+                                    main features, and how to access the current prototype on your local network on
+                                    your browser. It was made during the course Software Engineering (EPL343) at
+                                    UCY.<br>
+                                    <a class="btn-sm btn-primary"
+                                        href="https://github.com/CS-UCY-EPL343/epl343.winter21.team4" target="_blank">
+                                        <i class="fab fa-fw fa-github"></i>
+                                        Check out on GitHub
+                                    </a>
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
